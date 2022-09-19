@@ -13,7 +13,7 @@ import Combine
 class InvoicesListViewModelTests: XCTestCase {
     func testLoadingSetsDataSource() {
         let expectation = self.expectation(description: "Sets data source")
-        var invoice = InvoicesListViewModel(dataSource: [])
+        let invoice = InvoicesListViewModel(dataSource: [])
         var cancellables = Set<AnyCancellable>()
         invoice.$dataSource
             .sink(receiveValue: { _ in

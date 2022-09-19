@@ -33,6 +33,7 @@ struct InvoiceCell: View {
             }
             Spacer()
             VStack(alignment: .trailing) {
+                // TODO - handle localization correctly to show 1 item/ 2 items
                 Text(String(localized: "\(invoice.lineItemCount) items", comment: "Number of invoice line items"))
                     .foregroundColor(.white)
                 Spacer()

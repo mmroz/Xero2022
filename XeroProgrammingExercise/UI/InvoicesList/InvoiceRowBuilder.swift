@@ -13,10 +13,8 @@ enum InvoiceRowBuilder {
     ///   - items: The invoice row items
     static func sections(items: [InvoiceRowViewModel]) -> NSDiffableDataSourceSnapshot<InvoicesListViewController.TableSections, InvoiceRowViewModel> {
         var snapshot = NSDiffableDataSourceSnapshot<InvoicesListViewController.TableSections, InvoiceRowViewModel>()
-        if !items.isEmpty {
-            snapshot.appendSections([.all])
-            snapshot.appendItems(items, toSection: .all)
-        }
+        snapshot.appendSections([.all])
+        snapshot.appendItems(items, toSection: .all)
         return snapshot
     }
 }
